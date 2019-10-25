@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mvvm</title>
+    <style>
+      #app {
+        margin: 50px;
+      }
+      input {
+        padding: 10px;
+        font-size: 30px;
+        outline: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input v-model="name" type="text">
+      <h1>{{name}}</h1>
+      <h2>{{name}}</h2>
+    </div>
+  </body>
+  <script src="./js/Observer.js"></script>
+	<script src="./js/Watcher.js"></script>
+	<script src="./js/Compile.js"></script>
+  <script src="./js/Vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        name: 'smile'
+      }
+    })
+  </script>
+</html>
