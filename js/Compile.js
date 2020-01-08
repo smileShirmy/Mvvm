@@ -107,6 +107,6 @@ class Compile {
   }
 
   isElementNode(node) {
-    return node.nodeType === 1
+    return node.nodeType === document.ELEMENT_NODE
   }
 }
